@@ -1,28 +1,74 @@
+html {
+}
+
 body {
 	font-family: "Lora", serif;
 	padding: 0;
 	margin: 0;
 	height: 100%;
-	background: #444;
+	background: #3782d3;
+	color: #222;
 }
 
 #main {
 	width: 670px;
 	margin: 0 auto;
-	padding: 80px 30px 40px 30px;
-	background: #f9f9ff;
-	box-shadow: #111 0 0 20px;
-	height: 100vh;
+	padding: 40px 30px 40px 30px;
+	background: #ffffff;
+	/*box-shadow: #111 0 0 20px;*/
+	height: 100%;
 }
+
 .blurb {
 	padding-top: 40px;
 	vertical-align: top;
 }
 
+.format img {
+	width: 300px;
+	box-shadow: #99c 0 0 10px 0px;
+}
+
+.format img.darker-shadow {
+	box-shadow: #447 0 0 10px 0px;
+}
+
+.format + .format {
+	margin-top: 40px;
+}
+
+.format h2 {
+	margin-top: 0;
+}
+
+.format .info {
+	vertical-align: top;
+	padding: 10px 5px 0 20px;
+}
+
+.format a.buy {
+	display: inline-block;
+	background: #3782d3;
+	color: #fff;
+	text-decoration: none;
+	padding: 2px 5px;
+	border: 1px solid #222;
+	border-radius: 6px;
+	margin-top: 4px;
+}
+
+.format a.buy:hover {
+	background: #6191db;
+}
+
+.format a.buy:active {
+	background: #4d74bf;
+}
+
 .blurb p {
 	margin-top: 0;
 	font-size: 22px;
-	line-height: 30px;
+	line-height: 32px;
 }
 
 p {
@@ -34,10 +80,15 @@ p.top {
 	margin-top: 0;
 }
 
+hr {
+	margin-top: 50px;
+	color: #3782d3;
+}
+
 #cover {
 	width: 200px;
 	float: left;
 	margin-right: 30px;
 	margin-bottom: 30px;
-	box-shadow: #a9f 0 0 30px;
+	box-shadow: #3782d3 0 0 15px 0px;
 }
