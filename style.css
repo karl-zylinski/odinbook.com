@@ -57,6 +57,12 @@ body {
 	margin-top: 4px;
 }
 
+.format a.buy span {
+	color: #222;
+	font-size: 0.6em;
+	vertical-align: top;
+}
+
 .format a.buy:hover {
 	background: #6191db;
 }
