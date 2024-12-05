@@ -10,6 +10,14 @@ body {
 	color: #222;
 }
 
+a {
+	color: #3d6dda;
+}
+
+a:visited {
+	color: #3d6dda;
+}
+
 #main {
 	width: 670px;
 	margin: 0 auto;
@@ -20,17 +28,28 @@ body {
 }
 
 .blurb {
-	padding-top: 40px;
+	padding-top: 20px;
 	vertical-align: top;
 }
 
+.format {
+	margin-top: 40px;
+	background: #f0f7ff;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+
 .format img {
-	width: 300px;
-	box-shadow: #99c 0 0 10px 0px;
+	float: right;
+	max-width: 50%;
+	max-height: 250px;
+	box-shadow: #bbe 0 0 15px 0px;
+	margin-left: 20px;
 }
 
 .format img.darker-shadow {
-	box-shadow: #447 0 0 10px 0px;
+	box-shadow: #99c 0 0 15px 0px;
 }
 
 .format + .format {
@@ -61,6 +80,7 @@ body {
 	color: #222;
 	font-size: 0.6em;
 	vertical-align: top;
+	font-weight: bold;
 }
 
 .format a.buy:hover {
@@ -88,6 +108,7 @@ p.top {
 
 hr {
 	margin-top: 50px;
+	margin-bottom: 40px;
 	color: #3782d3;
 }
 
@@ -95,6 +116,43 @@ hr {
 	width: 200px;
 	float: left;
 	margin-right: 30px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	box-shadow: #3782d3 0 0 15px 0px;
+}
+
+#portrait {
+	max-width: 40%;
+	float: left;
+	max-height: 200px;
+	margin-right: 15px;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 670px) {
+	#main {
+		padding: 15px;
+		width: calc(100% - 30px);
+	}
+
+	#cover {
+		width: 30%;
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+
+	.blurb {
+		padding-top: 0px;
+	}
+
+	.format {
+		margin-left: -10px;
+		margin-right: -10px;
+		padding: 15px;
+		border-radius: 0;
+	}
+
+	.blurb p {
+		font-size: 18px;
+		line-height: 24px;
+	}
 }
