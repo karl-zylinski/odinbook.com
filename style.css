@@ -30,6 +30,7 @@ a:visited {
 .blurb {
 	padding-top: 20px;
 	vertical-align: top;
+	margin-bottom: 25px;
 }
 
 .format {
@@ -128,7 +129,27 @@ hr {
 	margin-bottom: 10px;
 }
 
-@media screen and (max-width: 670px) {
+#cover-narrow {
+	display: none;
+}
+
+#available-formats {
+	margin-top: 30px;
+	margin-bottom: 0;
+}
+
+.format.first {
+	margin-top: 20px;
+}
+
+
+@media screen and (max-width: 750px) {
+	body {
+		padding: 0;
+	}
+
+	
+
 	#main {
 		padding: 15px;
 		width: calc(100% - 30px);
@@ -136,23 +157,53 @@ hr {
 
 	#cover {
 		width: 30%;
-		margin-right: 20px;
-		margin-bottom: 20px;
 	}
 
 	.blurb {
-		padding-top: 0px;
 	}
 
 	.format {
-		margin-left: -10px;
-		margin-right: -10px;
+		margin-left: -15px;
+		margin-right: -15px;
 		padding: 15px;
 		border-radius: 0;
 	}
 
 	.blurb p {
-		font-size: 18px;
-		line-height: 24px;
+		font-size: 20px;
+		line-height: 28px;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	#cover {
+		margin-right: 20px;
+		margin-bottom: 10px;
+	}
+	.blurb {
+		padding-top: 8px;
+	}
+}
+
+
+
+@media screen and (max-width: 450px) {
+	#main {
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	.blurb {
+		padding-top: 15px;
+		margin-bottom: 45px;
+	}
+
+	#cover {
+		display: none;
+	}
+
+	#cover-narrow {
+		width: 100%;
+		display: block;
 	}
 }
