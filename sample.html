@@ -143,6 +143,7 @@ a:hover {
 
 a:has(h1), a:has(h2), a:has(h3), a:has(h4) {
 	text-decoration: none;
+	display: block;
 }
 
 #contents a {
@@ -443,6 +444,7 @@ pre.warning {
 	float:right;
 	left: 30px;
 	width: 0;
+	height: 0;
 	overflow: visible;
 	font-size: 14px;
 	line-height: 20px;
@@ -741,13 +743,14 @@ a.external {
 
 	.side-bubble {
 		left: inherit;
-		position: static;
+		position: relative;
 		width: inherit;
 		font-size: inherit;
 		padding: 0;
 		margin: 0;
 		width: 100%;
 		float: none;
+		height: inherit;
 		top: inherit;
 		font-size: 14px;
 	}
