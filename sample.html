@@ -753,6 +753,7 @@ a.external {
 		height: inherit;
 		top: inherit;
 		font-size: 14px;
+		margin-bottom: 15px;
 	}
 
 
@@ -1292,7 +1293,7 @@ decimal_64 = <span class='highlight number'>0.5</span>
 <li>Zero value: <code>""</code> (empty string)</li>
 <li>There's also a <code>cstring</code> type for interfacing with the C programming language. There are procedures in <a href='https://pkg.odin-lang.org/core/strings/' class='external'><code>core:strings</code></a> to convert back and forth between <code>string</code> and <code>cstring</code>.</li>
 <li>There's <a href='#strings-1'>a whole chapter on strings</a>.</li>
-</ul><div class='side-bubble'><div class='extra_content c' style='top: 0px;' ><div class='triangle'></div><p class='first'>A <code>string</code> knows how long it is and does not use null-termination. Therefore <code>len(some_string)</code> can tell you the length of the string without having to scan through it in search for a null character. The <code>cstring</code> types uses a null-terminator.</p></div></div>
+</ul><div class='side-bubble'><div class='extra_content c' style='top: -10px;' ><div class='triangle'></div><p class='first'>In contrast to C, a <code>string</code> knows how long it is and does not use null-termination. Therefore <code>len(some_string)</code> can tell you the length of the string without having to scan through it in search for a null character. The <code>cstring</code> types uses a null-terminator.</p></div></div>
 <a id='runes' href='#runes'><h4>Runes<span class='chapter-number'></span></h4></a>
 <ul><li>Type: <code>rune</code></li>
 <li>A single UTF-8 string code point (in many cases a single character, but can be part of a <em>grapheme cluster</em>. More about that in the <a href='#strings-1'>strings chapter</a>).</li>
