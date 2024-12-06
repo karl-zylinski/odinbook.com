@@ -176,18 +176,6 @@ hr {
 }
 
 @media screen and (max-width: 520px) {
-	#cover {
-		margin-right: 20px;
-		margin-bottom: 10px;
-	}
-	.blurb {
-		padding-top: 8px;
-	}
-}
-
-
-
-@media screen and (max-width: 450px) {
 	#main {
 		margin-top: 0;
 		padding-top: 0;
