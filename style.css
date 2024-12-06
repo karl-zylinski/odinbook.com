@@ -44,8 +44,8 @@ a:visited {
 .format img {
 	float: right;
 	max-width: 50%;
-	max-height: 250px;
-	box-shadow: #bbe 0 0 15px 0px;
+	max-height: 230px;
+	box-shadow: #99c 0 0 15px 0px;
 	margin-left: 20px;
 }
 
