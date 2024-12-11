@@ -299,6 +299,8 @@ body.single-chapter {
 #contents #contents-show-button {
 	display: none;
 	font-weight: 500;
+	font-family: "Source Sans 3", "Segoe UI", "Arial", sans-serif;
+	line-height: 28px;
 }
 
 strong {
@@ -862,8 +864,8 @@ a.external {
 		background: inherit;
 	}
 
-	#contents !important {
-		box-shadow: inherit;
+	#contents {
+		box-shadow: inherit !important;
 	}
 
 	#contents #contents-show-button {
@@ -914,7 +916,7 @@ a.external {
 	}
 }
 </style>
-<meta property="og:title" content="Understanding the Odin Programming Language by Karl Zylinski" />
+<meta property="og:title" content="Understanding the Odin Programming Language by Karl Zylinski">
 
 <script>
 function copy_to_clipboard(button, to_copy) {
@@ -973,7 +975,7 @@ if ((dark_from_media && !light_from_search) || dark_from_search) {
 
 </head>
 <body><div id="main"><div id="cover"><a id='understanding-the-odin-programming-language'><h1 class='title'>Understanding the Odin Programming Language</h1></a>
-<button onclick="toggle_dark()" id="dark-mode-button" title="You can also add ?dark or ?light to URL just after .html"></button>by <a href="#about-the-author">Karl Zylinski</a><p style='margin-top: 30px;'><strong>This is a sample, it contains the first three chapters. Buy the full book at <a href="https://odinbook.com">odinbook.com</a>.</strong></p></div><h1 id="contents-heading">Contents</h1><div id="contents"><button onclick="toggle_contents()" id="contents-show-button"><div class="line1"></div><div class="line2"></div><div class="line3"></div><div class="close"></div><span>Contents</span></button><div id="contents-main"><a onclick="close_contents();" href='#introduction' class='level-1'>1: Introduction</a>
+<button onclick="toggle_dark()" id="dark-mode-button" title="You can also add ?dark or ?light to URL just after .html"></button>by <a href="#about-the-author">Karl Zylinski</a><p style='margin-top: 30px;'><strong>This is a sample, it contains the first three chapters. Buy the full book at <a href="https://odinbook.com">odinbook.com</a>.</strong></p></div><h1 id="contents-heading">Contents</h1><div id="contents"><div onclick="toggle_contents()" id="contents-show-button"><div class="line1"></div><div class="line2"></div><div class="line3"></div><div class="close"></div><span>Contents</span></div><div id="contents-main"><a onclick="close_contents();" href='#introduction' class='level-1'>1: Introduction</a>
 <a onclick="close_contents();" href='#why-learn-odin' class='level-2'>1.1: Why learn Odin?</a>
 <a onclick="close_contents();" href='#language-overview' class='level-2'>1.2: Language overview</a>
 <a onclick="close_contents();" href='#why-write-a-book' class='level-2'>1.3: Why write a book?</a>
@@ -1342,6 +1344,7 @@ Thanks for reading! This is the end of the sample. If you want to buy the rest o
 </p>
 <p>
 The full book contains these chapters:
+</p>
 <ol><li>Introduction</li>
 <li>Hellope! A tiny program</li>
 <li>Variables and constants</li>
@@ -1376,6 +1379,5 @@ The full book contains these chapters:
 <li>Appendix D: Box2D and raylib</li>
 <li>About the author</li>
 </ol>
-</p>
 </div></body>
 </html>
