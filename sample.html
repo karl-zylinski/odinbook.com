@@ -759,6 +759,7 @@ a.external {
 		height: inherit;
 		top: inherit;
 		font-size: 14px;
+		line-height: 21px;
 		margin-bottom: 15px;
 	}
 
@@ -979,7 +980,7 @@ if ((dark_from_media && !light_from_search) || dark_from_search) {
 
 </head>
 <body><div id="main"><div id="cover"><a id='understanding-the-odin-programming-language'><h1 class='title'>Understanding the Odin Programming Language</h1></a>
-<button onclick="toggle_dark()" id="dark-mode-button" title="You can also add ?dark or ?light to URL just after .html"></button>by <a href="#about-the-author">Karl Zylinski</a><p style='margin-top: 30px;'><strong>This is a sample, it contains the first three chapters. Buy the full book at <a href="https://odinbook.com">odinbook.com</a>.</strong> Note that this HTML version is only available through <a href="https://zylinski.itch.io/odinbook">Itch</a>.</p></div><h1 id="contents-heading">Contents</h1><div id="contents"><div onclick="toggle_contents()" id="contents-show-button"><div class="line1"></div><div class="line2"></div><div class="line3"></div><div class="close"></div><span>Contents</span></div><div id="contents-main"><a onclick="close_contents();" href='#introduction' class='level-1'>1: Introduction</a>
+<button onclick="toggle_dark()" id="dark-mode-button" title="You can also add ?dark or ?light to URL just after .html"></button>by <a href="#about-the-author">Karl Zylinski</a><p>Version 1.5</p><p style='margin-top: 30px;'><strong>This is a sample, it contains the first three chapters. Buy the full book at <a href="https://odinbook.com">odinbook.com</a>.</strong> Note that this HTML version is only available through <a href="https://zylinski.itch.io/odinbook">Itch</a>.</p></div><h1 id="contents-heading">Contents</h1><div id="contents"><div onclick="toggle_contents()" id="contents-show-button"><div class="line1"></div><div class="line2"></div><div class="line3"></div><div class="close"></div><span>Contents</span></div><div id="contents-main"><a onclick="close_contents();" href='#introduction' class='level-1'>1: Introduction</a>
 <a onclick="close_contents();" href='#why-learn-odin' class='level-2'>1.1: Why learn Odin?</a>
 <a onclick="close_contents();" href='#language-overview' class='level-2'>1.2: Language overview</a>
 <a onclick="close_contents();" href='#why-write-a-book' class='level-2'>1.3: Why write a book?</a>
@@ -1023,7 +1024,7 @@ if ((dark_from_media && !light_from_search) || dark_from_search) {
 <a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>15: Bit-related types</a>
 <a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>16: Error handling</a>
 <a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>17: Package system and code organization</a>
-<a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>18: You don't need a build system</a>
+<a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>18: You (probably) don't need a build system</a>
 <a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>19: Reflection and Run-Time Type Information (RTTI)</a>
 <a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>20: Data-oriented design</a>
 <a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>21: Making C library bindings (Foreign Function Interface)</a>
@@ -1031,7 +1032,7 @@ if ((dark_from_media && !light_from_search) || dark_from_search) {
 <a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>23: Odin features you should avoid</a>
 <a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>24: A tour of the core collection</a>
 <a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>25: Libraries for creating video games</a>
-<a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>26: Things I did not cover</a>
+<a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>26: A few more things...</a>
 <a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>27: Where to find more Odin resources</a>
 <a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>28: Thanks for reading!</a>
 <a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>29: Appendix A: Handle-based array</a>
@@ -1040,21 +1041,22 @@ if ((dark_from_media && !light_from_search) || dark_from_search) {
 <a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>32: Appendix D: Box2D and raylib</a>
 <a onclick="close_contents();" href='#end-of-sample' class='level-1 after-end'>33: About the author</a>
 </div></div><div class='chapter-heading first'><span class='chapter-heading-number'>Chapter 1</span><a id='introduction' href='#introduction'><h1>Introduction</h1></a></div>
-<p>Hello! If you've been trying to learn the Odin Programming Language, but you feel like there are basic concepts that you don't fully understand, then this book is for you. Also, if you have never programmed in Odin before, but have some basic programming experience, then this book should be a good starting point as well.</p>
+<p>Hello! If you've been trying to learn the Odin Programming Language, but feel like there are basic concepts that you don't fully understand, then this book is for you. Also, if you have never programmed in Odin before, but have some basic programming experience, then this book should be a good starting point as well.</p>
 <div class='side-bubble'><div class='extra_content' style='top: 0px;' ><div class='triangle'></div><p class='first'>By "basic programming experience", I assume you understand variables, procedures (functions), if-statements, basic arrays and loops. Don't worry though, I'll go over how to do those things in Odin.</p><p>I also assume that you know how to run programs from a command-prompt or terminal.</p></div></div>
 <a id='why-learn-odin' href='#why-learn-odin'><h2>Why learn Odin?<span class='chapter-number'>1.1</span></h2></a>
 <p>I wouldn't say there is one big reason for learning Odin, but rather a big number of small reasons. Odin doesn't try to fundamentally solve any new problems. There are many "big agenda" languages out there, meaning languages that try to introduce completely new ways of thinking about programming. Odin is not one of them. The reasons for learning Odin may vary depending on your background. Here are two examples of such backgrounds:</p>
 <p>If you come from a higher level language such as C#, JavaScript or Python, but want to learn a low level language, where performance and control is easily attainable, then Odin may be for you. I think it is a great first low level language. Odin's modern features and simplicity cuts out some noise you find in older low level languages. This makes the programming fun and lets you focus on the low level concepts, without getting overwhelmed. I usually say that Odin is "low level with high level feeling".</p>
 <div class='side-bubble'><div class='extra_content' style='top: -90px;' ><div class='triangle'></div><p class='first'>A low level language is "closer to the hardware" than a high level language. There are less layers of abstract things between your code and the computer. In a low level language you have more control, but less things are done automatically for you.</p></div></div>
 <p>If you've used the C Programming Language, but don't find it as fun to program in as it could be, then Odin may be for you. I have worked on big video game engines written in C. I would say that Odin point-for-point addresses many of the issues I've had with C, while also incorporating some of my favorite C best practices, straight into the language.</p>
-<div class='side-bubble'><div class='extra_content c' style='top: 0px;' ><div class='triangle'></div><p class='first'>For example, Odin makes heavy use of zero-is-initialized, which is a great way to program C. It also comes with built-in support for allocators.</p></div></div>
-<p>If you don't know C or C++ then don't be intimidated by the "From C / C++" bubble just before this paragraph. I try to keep most information that assumes you know C or C++ within those bubbles. They are safe to skip.</p>
+<div class='side-bubble'><div class='extra_content c' style='top: 20px;' ><div class='triangle'></div><p class='first'>For example, Odin makes heavy use of designated initializers and zero-is-initialized, which is a great way to program C. It also comes with built-in support for custom allocators and Structure of Arrays (SoA).</p></div></div>
+<p>If you don't know C or C++, then don't be intimidated by the "From C / C++" bubble just before this paragraph. I try to keep most information that assumes you know C or C++ within those bubbles. They are safe to skip.</p>
 <p>As a final answer to "Why learn Odin?", I'll give a short anecdote: In 2023-2024 I used Odin to create my own video game: <a href='https://store.steampowered.com/app/2781210/CAT__ONION/' class='external'>CAT &amp; ONION</a>. Never before have I been able to finish and ship a whole game, all by myself. In the past I always felt some degree of friction from whichever programming language I used. That friction usually built up over time, until I dropped the project. With Odin enough friction was removed, making it possible for me to ship something.</p>
+<div class='side-bubble'><div class='extra_content' style='top: -60px;' ><div class='triangle'></div><p class='first'>You can also get it on <a href='https://zylinski.itch.io/cat-and-onion' class='external'>itch.io</a>. That version comes with the full Odin source code!</p></div></div>
 <a id='language-overview' href='#language-overview'><h2>Language overview<span class='chapter-number'>1.2</span></h2></a>
-<p>Let's talk a bit about what Odin is, so that you have some reasonable expectations before reading more.</p>
-<p>Odin is a <em>compiled</em> language. You have to run the source code through the Odin compiler to produce an executable that you can later run without having to involve the Odin compiler.</p>
-<p>Odin is a <em>simple</em> language. Great care has been put into the design of the language so that the different parts work together as a simple whole.</p>
-<p>Odin uses <em>manual memory management</em>. You manually decide the lifetime of allocated memory. This means that you are in control of when memory is deallocated. It is not done automatically for you. This gives benefits in regards to performance and memory usage. It may seem scary to programmers that come from languages that employ automatic memory management. But fear not, Odin comes with built-in ways to track memory leaks and practical ways to handle temporary memory allocations. In chapters 9 to 13 we will look at different aspects of manual memory management. </p>
+<p>Let's talk a bit about what Odin is, so you have some reasonable expectations before reading more.</p>
+<p>Odin is a <em>compiled</em> language. You have to run the source code through the Odin compiler to produce an executable, that you can later run without having to involve the Odin compiler.</p>
+<p>Odin is a <em>simple</em> language. Great care has been put into the design of the language, making the different parts work together as a simple whole.</p>
+<p>Odin uses <em>manual memory management</em>. You manually decide the lifetime of dynamically allocated memory. This means that you are in control of when dynamic memory is deallocated. It is not done automatically for you. This gives benefits with regards to performance and memory usage. This may seem scary to programmers coming from languages that employ automatic memory management. But fear not, Odin comes with built-in ways to track memory leaks and practical ways to handle temporary memory allocations. In chapters 9 to 13 we will look at different aspects of manual memory management. </p>
 <p>Odin is <em>not object-oriented</em>. Your code will mainly use procedures (functions), if-statements, loops and structs to get things done. This makes the code very simple. The object-oriented programmer will find new ways to write reusable and generic code, that in general has better performance characteristics than object-oriented code.</p>
 <p>Odin is well suited for <em>data-oriented programming</em>. This means that it is easy to write Odin code that utilizes the CPU in an efficient manner. We will discuss data-oriented programming in chapter 20.</p>
 <p>Finally, the language really <em>gets out of the way</em> and lets you do things your way. This is one of many reasons why "joy of programming" is marketed as an important feature of the language.</p>
@@ -1071,12 +1073,12 @@ if ((dark_from_media && !light_from_search) || dark_from_search) {
 <p>I will not go over how to install the Odin compiler. For that I refer to the official <a href='https://odin-lang.org/docs/install/' class='external'>Getting Started</a> guide on the Odin website.</p>
 <p>After installing the compiler I assume that you have the folder where you installed it your path. Meaning that you can run <code>odin</code> from a command prompt or terminal anywhere on your computer.</p>
 <p>Should you have any trouble installing the compiler, then I also have a video on the topic, targeted at Windows users:</p>
-<p><a href="https://www.youtube.com/watch?v=yq5VabsGz_4">https://www.youtube.com/watch?v=yq5VabsGz_4↗</a></p><div class='side-bubble'><div class='extra_content' style='top: 10px;' ><div class='triangle'></div><p class='first'>Note that I install Odin from source in this video. This is not a requirement, you can use the pre-built releases that the <a href='https://odin-lang.org/docs/install/' class='external'>Getting Started</a> page mentions.</p></div></div>
+<p><a href="https://www.youtube.com/watch?v=yq5VabsGz_4" class='external'>https://www.youtube.com/watch?v=yq5VabsGz_4</a></p><div class='side-bubble'><div class='extra_content' style='top: 10px;' ><div class='triangle'></div><p class='first'>Note that I install Odin from source in this video. This is not a requirement, you can use the pre-built releases that the <a href='https://odin-lang.org/docs/install/' class='external'>Getting Started</a> page mentions.</p></div></div>
 <a id='if-you-get-stuck' href='#if-you-get-stuck'><h2>If you get stuck<span class='chapter-number'>1.6</span></h2></a>
-<p>If you can't figure out how to do something specific in Odin, and you can't find any help in this book, then I recommend checking these resources, in the order stated:</p>
+<p>If you can't figure out how to do something, and you can't find any help in this book, then I recommend checking these resources, in the order stated:</p>
 <ol><li> Check the <a href='https://odin-lang.org/docs/overview/' class='external'>official language overview</a>. It is not exhaustive, but searching around in there will answer many questions.</li>
 <li> Look inside <a href='https://github.com/odin-lang/Odin/blob/master/examples/demo/demo.odin' class='external'>demo.odin</a>. It is an example that comes with the compiler. It showcases many different features of the language. You'll find a local copy in <code>&lt;odin&gt;/examples</code>.</li>
-<li> Search in the core and base library collections. Pull the <code>&lt;odin&gt;/core</code> and <code>&lt;odin&gt;/base</code> folders into your text editor and just search around in there. Those library collections are well written and easy to read. It is a great way to learn many Odin concepts.</li>
+<li> Search in the core and base library collections. Pull the <code>&lt;odin&gt;/core</code> and <code>&lt;odin&gt;/base</code> folders into your text editor and just search around in there. Those library collections are well written and easy to read. See my video <a href='https://www.youtube.com/watch?v=mljzCWnvWCs' class='external'>"Exploring Odin without leaving your editor"</a> for more information.</li>
 <li> Ask in the <code>#beginners</code> channel on the <a href='https://discord.gg/odinlang' class='external'>Odin Discord server</a>. It is a chat server that has thousands of members. Many questions get answered very quickly.</li>
 </ol><div class='side-bubble'><div class='extra_content' style='top: -150px;' ><div class='triangle'></div><p class='first'>When I write <code>&lt;odin&gt;</code> in a path I refer to the location where you installed the Odin compiler.</p></div></div>
 <p>Finally, you're warmly welcome to join <a href='http://discord.gg/4FsHgtBmFK' class='external'>my own Discord server</a> (not the same as the official Odin Discord server mentioned above). It's a friendly place where you can ask questions about Odin and also discuss game development, or tell me about that typo you found in this book!</p>
@@ -1133,20 +1135,19 @@ main :: <span class='highlight keyword'>proc</span>() {
 <div class='side-bubble'><div class='extra_content' style='top: -10px;' ><div class='triangle'></div><p class='first'>There are other options than creating executables. For example you could create a library. A library won't need a <code>main</code> procedure.</p><p>For more information, run <code>odin build -help</code> and look into the <code>-build-mode</code> flag.</p></div></div>
 <p>If you had more than one Odin source file in the current folder, then all of them would be compiled as part of your program.</p>
 <a id='compile-without-running' href='#compile-without-running'><h2>Compile without running<span class='chapter-number'>2.4</span></h2></a>
-<p>If you replace <code>run</code> with <code>build</code>, meaning that you execute the following:</p>
+<p>You can replace <code>run</code> with <code>build</code>. Meaning that you execute the following:</p>
 <div class='code_wrapper'><button onclick='copy_to_clipboard(this, this.nextSibling)'>copy</button><pre>odin build .
-</pre></div><p>Then the program will just be compiled into an executable, without running it. In both the <code>build</code> and <code>run</code> cases, you'll be able to find the resulting executable next to your Odin source files. The name of the executable will be the name of the folder.</p>
+</pre></div><p>This will compile your code into an executable, without running it. In both the <code>build</code> and <code>run</code> cases, you'll be able to find the resulting executable next to your Odin source files. The name of the executable will be the name of the folder.</p>
 <figure><img src="chapter_2_exe.jpg" alt="Shows the hellope.exe next to hellope.odin"><figcaption>Regardless of if you execute <code>odin run .</code> or <code>odin build .</code> you'll always get an executable that you can run later without involving the Odin compiler.</figcaption></figure>
-<div class='side-bubble'><div class='extra_content' style='top: -150px;' ><div class='triangle'></div><p class='first'>If you are on Windows but can't see the <code>.exe</code> or <code>.odin</code> file endings within the file explorer, then please go into the <em>View</em> tab and check <em>File name extensions</em>. Computers are pretty much unusable without enabling this.</p></div></div>
+<div class='side-bubble'><div class='extra_content' style='top: -150px;' ><div class='triangle'></div><p class='first'>If you are on Windows but can't see the <code>.exe</code> or <code>.odin</code> file endings within the file explorer, then please go into the <em>View</em> tab and check <em>File name extensions</em>. Computers are pretty much unusable for software development without enabling this.</p></div></div>
 <a id='no-need-for-semicolons' href='#no-need-for-semicolons'><h2>No need for semicolons<span class='chapter-number'>2.5</span></h2></a>
 <p>There's no need to put a semicolon (<code>;</code>) at the end of each line, as is required in many other languages.</p>
 <p>Semicolons are <em>optional</em>, but I would encourage to simply not use them. The absence of semicolons fits well with the aesthetics of Odin. However, you can use them if you really want to!</p>
 <p>Also, if you really want to make sure that you don't accidentally use them by old habit, then there is a compiler flag to make any unnecessary semicolon into an error: <code>-vet-semicolon</code></p>
-<div class='side-bubble'><div class='extra_content' style='top: 0px;' ><div class='triangle'></div><p class='first'>Compiler flags are added when you run the compiler:</p><p><code>odin run . -vet-semicolon</code></p><p>In fact, I recommend you compile with the flag <code>-vet</code>. That one includes a whole bunch of other helpful checks, such as making it an error if you have unused imports.</p><p>You can see a list of all the different variations of <code>-vet</code> if you run</p><p><code>odin run -help</code></p></div></div>
+<div class='side-bubble'><div class='extra_content' style='top: 0px;' ><div class='triangle'></div><p class='first'>Compiler flags are added when you run the compiler:</p><p><code>odin run . -vet-semicolon</code></p><p>You can also try the <code>-vet</code> flag. That one includes a whole bunch of other helpful checks, such as making it an error if you have unused imports.</p><p>Personally, I like compiling with <code>-vet -strict-style</code>, which enables most vetting rules and also enforces the code style of <code>core</code>.</p></div></div>
 <a id='where-is-the-code-inside-corefmt' href='#where-is-the-code-inside-corefmt'><h2>Where is the code inside <code>core:fmt</code>?<span class='chapter-number'>2.6</span></h2></a>
 <p>Packages are just folders with Odin files inside them. The folder with your <code>hellope.odin</code> file is one package. And from your <code>hellope</code> package you also import the <code>core:fmt</code> package, which is also just a folder. But where is that <code>fmt</code> folder?</p>
 <p>It's part of the core collection. The core collection comes as source code along with the Odin compiler. This means that you can look at what the code inside it does. I encourage you to do this, as you can learn a lot from reading that code. You'll find the <code>core:fmt</code> package in <code>&lt;odin&gt;/core/fmt</code>. The <code>println</code> procedure you used can be found in <code>fmt_os.odin</code> within that folder.</p>
-<div class='side-bubble'><div class='extra_content' style='top: 0px;' ><div class='triangle'></div><p class='first'>Since core comes as source code, I recommend pulling it into your text editor so you can easily jump to the definition of things in there. I also recommend pulling in the <code>base</code> folder that exists next to <code>core</code>.</p></div></div>
 <figure><img src="chapter_2_core_fmt.jpg" alt="The contents of the fmt package: 5 odin files, where one is fmt_os.odin, which contains the println procedure."><figcaption>The contents of <code>&lt;odin&gt;/core/fmt</code>. The <code>println</code> procedure can be found inside <code>fmt_os.odin</code></figcaption></figure>
 <a id='compile-a-single-odin-source-file' href='#compile-a-single-odin-source-file'><h2>Compile a single Odin source file<span class='chapter-number'>2.7</span></h2></a>
 <p>If you want to just compile a single Odin file instead of all the files within a folder, then add the <code>-file</code> flag:</p>
@@ -1158,7 +1159,7 @@ main :: <span class='highlight keyword'>proc</span>() {
 <div class='chapter-heading '><span class='chapter-heading-number'>Chapter 3</span><a id='variables-and-constants' href='#variables-and-constants'><h1>Variables and constants</h1></a></div>
 <p>Odin has a syntax for declaring and assigning variables that will look unfamiliar to people coming from JavaScript, C or C#. But it might look familiar to those who have programmed in Pascal or Go.</p>
 <div class='side-bubble'><div class='extra_content' style='top: 0px;' ><div class='triangle'></div><p class='first'>The syntax of a language defines the form of the language; how it looks.</p></div></div>
-<p>In this chapter we'll look at how to create variables. We'll also look at how to convert variables from one type to another. As we shall see, there is something <em>strange</em> afoot with how plain numbers like <code>7</code> work in relation to variable types, which will bring us to talking about <em>constants</em>. At the end of the chapter I hope you'll see how Odin's interplay between variables and constants creates an elegant whole.</p>
+<p>In this chapter we'll look at how to create variables. We'll also look at how to convert variables from one type to another. As we shall see, there is something <em>strange</em> afoot with how plain numbers like <code>7</code> work in relation to variable types, which will bring us to talking about <em>constants</em>. By the end of the chapter, I hope you'll see how Odin's interplay between variables and constants creates an elegant whole.</p>
 <a id='declaring-variables-and-assigning-values' href='#declaring-variables-and-assigning-values'><h2>Declaring variables and assigning values<span class='chapter-number'>3.1</span></h2></a>
 <p>Variables are, like the name suggests, possible to <em>vary</em>. Meaning that the code can change a variable's value.</p>
 <p>You declare a variable like this:</p>
@@ -1166,7 +1167,7 @@ main :: <span class='highlight keyword'>proc</span>() {
 </pre></div><p>This variable is named <code>number</code>. It is of type <code>int</code>, short for integer. Note the <code>:</code> between the name and the type. It is the symbol Odin uses for declarations.</p>
 <p>Odin is a strongly typed language, meaning that the language is strict about types: You can <em>only</em> put integers into integer variables. You <em>cannot</em> change the type of a variable after it has been declared.</p>
 <p>What value does <code>number</code> have? Since we didn't specify any, it will have the value <em>zero</em>. This is true for all variables of all types. Technically speaking, since we didn't specify any value, then the <em>underlying memory</em> that holds the variable's value will be all zeroes. As we'll see in the <a href='#basic-types-summary'>summary at the end of this chapter</a>, this can have a few different meanings for non-numeric types.</p>
-<div class='side-bubble'><div class='extra_content c' style='top: 20px;' ><div class='triangle'></div><p class='first'>In C, writing just <code>int number;</code> will leave the variable non-initialized. It can contain any garbage memory! This is almost never what you want, and a source of many bugs. In Odin it will be initialized to zero by default. However, if you want to leave a variable non-initialized, then you can write:</p><p><code>number: int = ---</code></p><p>This is mostly useful in very specific performance-sensitive situations.</p></div></div>
+<div class='side-bubble'><div class='extra_content c' style='top: 20px;' ><div class='triangle'></div><p class='first'>In C, writing just <code>int number;</code> will leave the variable non-initialized. It can contain any garbage memory! This is almost never what you want, and a source of many bugs. In Odin it will be initialized to zero by default. However, if you want to leave a variable non-initialized, then you can write:</p><p><code>number: int = ---</code></p><p>This is mostly useful in very specific, performance-sensitive situations.</p></div></div>
 <p>You can assign a new value to an already existing variable:</p>
 <div class='code_wrapper'><button onclick='copy_to_clipboard(this, this.nextSibling)'>copy</button><pre>number: <span class='highlight keyword'>int</span>
 number = <span class='highlight number'>7</span>
@@ -1189,7 +1190,7 @@ main :: <span class='highlight keyword'>proc</span>() {
 </pre></div><div class='side-bubble'><div class='extra_content' style='top: 0px;' ><div class='triangle'></div><p class='first'>Putting <code>//</code> in front of some text in your code file creates a comment. The comment goes from <code>//</code> to the end of the line. You can also write</p><p><code>/* comment */</code></p><p>to create a multi-line comment. Multi-line comments can be nested.</p></div></div>
 <p>Note the usage of <code>:=</code> on the line where we declare and initialize <code>number</code> and that we use a plain <code>=</code> when we later change its value.</p>
 <a id='another-variable-type-and-casting' href='#another-variable-type-and-casting'><h2>Another variable type and casting<span class='chapter-number'>3.2</span></h2></a>
-<p>The type <code>int</code> we saw earlier can only store whole numbers. If we want to store any decimal number, meaning a number that can have a fractional part, then we can use the type <code>f32</code>:</p>
+<p>We just saw the type <code>int</code>. A variable of that type can only store whole numbers. If we want to store any decimal number, meaning a number that can have a fractional part, then we can use the type <code>f32</code>:</p>
 <div class='code_wrapper'><button onclick='copy_to_clipboard(this, this.nextSibling)'>copy</button><pre>decimal_number: <span class='highlight keyword'>f32</span>
 </pre></div><p>The <code>f</code> stands for "floating point number", usually called just "float". A floating point number is <a href='https://fabiensanglard.net/floating_point_visually_explained/' class='external'>a way of representing a decimal number</a>. The <code>32</code> means that it uses 32 bits of memory (or 4 bytes) to store the decimal number. Again, since we are not specifying a value, <code>decimal_number</code> will be zero by default.</p>
 <div class='side-bubble'><div class='extra_content' style='top: 0px;' ><div class='triangle'></div><p class='first'>Using more bits for your floats increases the biggest number it can store as well as its precision. However, more bits eat more memory. So many programmers use <code>f32</code> by default, even though most computers have 64 bit processors.</p><p>For example, video games use floats a lot, but very often the <code>f32</code> type is precise enough.</p><p>My use of the word <em>decimal</em> is a bit sloppy. A decimal number implies that the base 10 is used. That's not required. I just mean a number that can have a whole and a fractional part, which many people refer to as decimal numbers.</p></div></div>
@@ -1197,7 +1198,7 @@ main :: <span class='highlight keyword'>proc</span>() {
 <div class='code_wrapper'><button onclick='copy_to_clipboard(this, this.nextSibling)'>copy</button><pre>decimal_number: <span class='highlight keyword'>f32</span> = <span class='highlight number'>7</span>
 </pre></div><p>or</p>
 <div class='code_wrapper'><button onclick='copy_to_clipboard(this, this.nextSibling)'>copy</button><pre>decimal_number := <span class='highlight keyword'>f32</span>(<span class='highlight number'>7</span>)
-</pre></div><p>These two variants have the same end result. The first one looks like <code>decimal_number: f32</code>, but we've added <code>= 7</code> at the end. In the second case we have skipped saying what type <code>decimal_number</code> is, and instead rely on the type being inferred from the right hand side: <code>f32(7)</code>. This means that we take <code>7</code> and <em>cast it</em>, or convert it, to the type <code>f32</code>.</p>
+</pre></div><p>Both ways have the same end result. The first one looks like <code>decimal_number: f32</code>, but we've added <code>= 7</code> at the end. In the second case we have skipped saying what type <code>decimal_number</code> is, and instead rely on the type being inferred from the right hand side: <code>f32(7)</code>. This means that we take <code>7</code> and <em>cast it</em>, or convert it, to the type <code>f32</code>.</p>
 <div class='side-bubble'><div class='extra_content' style='top: 0px;' ><div class='triangle'></div><p class='first'><code>f32(7)</code> almost looks like we are running a procedure called <code>f32</code> and feeding it the value <code>7</code>. Whenever you see a <em>type name</em> followed by parenthesis like this, then it is a cast.</p></div></div>
 <p>A decimal number can of course have a decimal point followed by a fractional part:</p>
 <div class='code_wrapper'><button onclick='copy_to_clipboard(this, this.nextSibling)'>copy</button><pre>decimal_number: <span class='highlight keyword'>f32</span> = <span class='highlight number'>7.42</span>
@@ -1222,15 +1223,15 @@ decimal_number = <span class='highlight number'>7</span>
 <a id='constants' href='#constants'><h2>Constants<span class='chapter-number'>3.3</span></h2></a>
 <p>Constants are things that only exist at compile time. Since they only exist at compile time, they cannot be changed while the program is running.</p>
 <div class='side-bubble'><div class='extra_content' style='top: 0px;' ><div class='triangle'></div><p class='first'>By compile time I refer to things that happen as the Odin compiler is running. Anything that happens later, as the program is running, is referred to as run time.</p></div></div>
-<p>I already said that a plain number like <code>7</code> is a constant. But you can also create a named constant like this:</p>
+<p>I already said that a plain number like <code>7</code> is a constant. But you can also create <em>named</em> constants:</p>
 <div class='code_wrapper'><button onclick='copy_to_clipboard(this, this.nextSibling)'>copy</button><pre>CONSTANT_NUMBER :: <span class='highlight number'>12</span>
-</pre></div><p>Note that we use <code>::</code> to create named constants. You can assign a constant to a variable like this:</p>
+</pre></div><p>We use <code>::</code> to create named constants, <em>not</em> <code>:=</code> that we used to create variables. You can assign a constant to a variable like this:</p>
 <div class='code_wrapper'><button onclick='copy_to_clipboard(this, this.nextSibling)'>copy</button><pre>CONSTANT_NUMBER :: <span class='highlight number'>12</span>
 number := CONSTANT_NUMBER
 </pre></div><div class='side-bubble'><div class='extra_content' style='top: 0px;' ><div class='triangle'></div><p class='first'>I use <code>SCREAMING_SNAKE_CASE</code> when naming constants. That's just <a href='https://github.com/odin-lang/Odin/wiki/Naming-Convention' class='external'>the naming convention used by the core collection</a>, which I have adopted.</p></div></div>
-<p>Note that we declare and assign to <code>number</code> using <code>:=</code>. Just like before, the type of <code>number</code> will be inferred to <code>int</code>. The two lines above are actually identical to just typing</p>
+<p>The type of <code>number</code> will be inferred to <code>int</code>. Why? The two lines above are actually identical to just typing:</p>
 <div class='code_wrapper'><button onclick='copy_to_clipboard(this, this.nextSibling)'>copy</button><pre>number := <span class='highlight number'>12</span>
-</pre></div><p>You can think of named constants having their value "copy-pasted" into wherever you use their name. You can also think of a stand-alone <code>12</code> as a nameless constant.</p>
+</pre></div><p>As your program is getting compiled, you can think of named constants having their value "copy-pasted" into wherever you use their name. You can also think of a stand-alone <code>12</code> as a nameless constant.</p>
 <p>Now, I said that constants have a slightly different type system compared to variables. One could say that constants have a slightly <em>weaker</em> type system. The type of <code>CONSTANT_NUMBER :: 12</code> is <em>Untyped Integer</em>. An Untyped Integer can be implicitly converted to any integer or floating point type, as long as that type can 'accommodate' the value.</p>
 <p>This is why <code>decimal_number: f32 = 7</code> is allowed. <code>7</code> is a constant of type Untyped Integer, and that type allows for an implicit conversion (or cast) to the type <code>f32</code>.</p>
 <div class='side-bubble'><div class='extra_content' style='top: 0px;' ><div class='triangle'></div><p class='first'>I write Untyped Integer capitalized like this to make it easier to read. I know, the idea of an Untyped Type is quite <em>strange</em>. But as you'll find out by programming more Odin, this system is very comfortable without feeling vague.</p></div></div>
@@ -1239,7 +1240,7 @@ number := CONSTANT_NUMBER
 small_number: <span class='highlight keyword'>i8</span> = BIG_CONSTANT_NUMBER
 </pre></div><p><code>small_number</code> is of type <code>i8</code> (8 bit signed integer), the biggest value it can contain (accommodate) is <code>127</code>. <code>BIG_CONSTANT_NUMBER</code> is a constant of type Untyped Integer. When the compiler tries to shove <code>BIG_CONSTANT_NUMBER</code> into <code>small_number</code>, then it sees that the value of this constant is bigger than <code>127</code>, so it refuses to do so.</p>
 <div class='side-bubble'><div class='extra_content' style='top: 0px;' ><div class='triangle'></div><p class='first'>"8 bit integer" means that the computer has eight binary numbers (bits) at its disposal to represent an integer. The biggest number one can represent with 8 bits is <code>255</code>. But since signed integers can be negative, then only half of that range can be used. The range of the 8 bit signed integer is therefore <code>-128</code> to <code>127</code>.</p></div></div>
-<p>There are more Untyped Types than just Untyped Integer. Constants containing a decimal point such as <code>DECIMAL_CONSTANT :: 27.12</code> are of type <em>Untyped Float</em>. An Untyped Float can only be assigned to a floating point variable such as <code>f16</code>, <code>f32</code> or <code>f64</code> (with one exception, which we'll see below). The code below will <em>not</em> compile, because we are trying to assign an Untyped Float to an integer variable. The integer variable <em>cannot accommodate</em> decimal numbers.</p>
+<p>There are more Untyped Types than just Untyped Integer. Constants containing a decimal point such as <code>DECIMAL_CONSTANT :: 27.12</code> are of type <em>Untyped Float</em>. An Untyped Float can only be assigned to a floating point variable such as <code>f16</code>, <code>f32</code> or <code>f64</code> (with one exception, which we'll see below). The code below will <em>not</em> compile, because we are trying to assign an Untyped Float to an integer variable. The integer variable <em>cannot accommodate</em> numbers with a fractional part.</p>
 <div class='code_wrapper'><button onclick='copy_to_clipboard(this, this.nextSibling)'>copy</button><pre class='error'>DECIMAL_CONSTANT :: <span class='highlight number'>27.12</span>
 my_integer: <span class='highlight keyword'>int</span> = DECIMAL_CONSTANT
 </pre></div><p>There's an exception to this. If you have an Untyped Float with all zero decimals, then it can be implicitly converted to an integer:</p>
@@ -1251,7 +1252,7 @@ my_integer: <span class='highlight keyword'>int</span> = DECIMAL_CONSTANT
 <a id='type-inference-defaults' href='#type-inference-defaults'><h2>Type inference defaults<span class='chapter-number'>3.4</span></h2></a>
 <p>As I mentioned before, when we type something like</p>
 <div class='code_wrapper'><button onclick='copy_to_clipboard(this, this.nextSibling)'>copy</button><pre>decimal_number := <span class='highlight number'>13.38</span>
-</pre></div><p>then this variable will be of type <code>f64</code>. This default choice is specified by the Untyped Type system that constants use:</p>
+</pre></div><p>then this variable will be of type <code>f64</code>. This default is specified by the Untyped Type system that constants use:</p>
 <ul><li><code>CONSTANT_NUMBER :: 7</code> or just a plain <code>7</code> are both of type <em>Untyped Integer</em>. The default inferred type is <code>int</code>.</li>
 <li><code>DECIMAL_CONSTANT:: 42.09</code> or just a plain <code>42.09</code> are both of type <em>Untyped Float</em>. The default inferred type is <code>f64</code>.</li>
 </ul><p>These type inference defaults should not be confused with the <em>implicit conversions</em> that Untyped Types also allow: </p>
@@ -1289,7 +1290,7 @@ decimal_64 = <span class='highlight number'>0.5</span>
 <li><code>uintptr</code> is a special unsigned integer that is always of <a href='#pointers'>pointer</a> size.</li>
 </ul><a id='floating-point-numbers' href='#floating-point-numbers'><h4>Floating point numbers<span class='chapter-number'></span></h4></a>
 <ul><li>Types: <code>f16 f32 f64</code></li>
-<li>Possible values: Positive and negative decimal numbers.</li>
+<li>Possible values: Positive and negative decimal numbers (numbers with a whole and a fractional part).</li>
 <li>More bits make it possible to store bigger and more precise decimal numbers.</li>
 <li>Unlike integers, you can assign however large a number you want to floats. If it is too big, then the float will take on the value positive or negative infinity.</li>
 </ul><a id='boolean-types' href='#boolean-types'><h4>Boolean types<span class='chapter-number'></span></h4></a>
@@ -1341,7 +1342,7 @@ decimal_64 = <span class='highlight number'>0.5</span>
 <li>Cannot be used with type inference. <code>some_variable := nil</code> will not compile.</li>
 </ul><a id='video' href='#video'><h2>Video<span class='chapter-number'>3.7</span></h2></a>
 <p>I've made a video where I explain how the Untyped Types system works:</p>
-<p><a href="https://www.youtube.com/watch?v=qLYga3iCmt0">https://www.youtube.com/watch?v=qLYga3iCmt0↗</a></p>
+<p><a href="https://www.youtube.com/watch?v=qLYga3iCmt0" class='external'>https://www.youtube.com/watch?v=qLYga3iCmt0</a></p>
 <a href="#end-of-sample"><h1 id="end-of-sample">End of sample</h1></a>
 <p>
 Thanks for reading! This is the end of the sample. If you want to buy the rest of the book, then please go to <a href="http://odinbook.com">odinbook.com</a>. Note that this HTML version is only available through <a href="https://zylinski.itch.io/odinbook">Itch</a>.
@@ -1366,7 +1367,7 @@ The full book contains these chapters:
 <li>Bit-related types</li>
 <li>Error handling</li>
 <li>Package system and code organization</li>
-<li>You don't need a build system</li>
+<li>You (probably) don't need a build system</li>
 <li>Reflection and Run-Time Type Information (RTTI)</li>
 <li>Data-oriented design</li>
 <li>Making C library bindings (Foreign Function Interface)</li>
@@ -1374,7 +1375,7 @@ The full book contains these chapters:
 <li>Odin features you should avoid</li>
 <li>A tour of the core collection</li>
 <li>Libraries for creating video games</li>
-<li>Things I did not cover</li>
+<li>A few more things...</li>
 <li>Where to find more Odin resources</li>
 <li>Thanks for reading!</li>
 <li>Appendix A: Handle-based array</li>
