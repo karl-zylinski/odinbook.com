@@ -147,6 +147,13 @@ hr {
 }
 
 
+blockquote {
+	border-left: 6px solid #3782d3;
+	margin-left: 0;
+	padding-left: 12px;
+	font-style: italic;
+}
+
 @media screen and (max-width: 750px) {
 	body {
 		padding: 0;
