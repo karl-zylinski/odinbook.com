@@ -989,7 +989,7 @@ if ((dark_from_media && !light_from_search) || dark_from_search) {
 
 </head>
 <body><div id="main"><div id="cover"><a id='understanding-the-odin-programming-language'><h1 class='title'>Understanding the Odin Programming Language</h1></a>
-<button onclick="toggle_dark()" id="dark-mode-button" title="You can also add ?dark or ?light to URL just after .html"></button>by <a href="#about-the-author">Karl Zylinski</a><p>Version 1.7</p><p style='margin-top: 40px;'><strong>This is a sample, it contains the first three chapters.</strong></p><p>Buy the full book at <a href="https://odinbook.com">odinbook.com</a>.<br>This HTML version is only available through <a href="https://store.zylinski.se/b/tnwvO">My Store</a> and <a href="https://zylinski.itch.io/odinbook">Itch</a>.</p></div><h1 id="contents-heading">Contents</h1><div id="contents"><div onclick="toggle_contents()" id="contents-show-button"><div class="line1"></div><div class="line2"></div><div class="line3"></div><div class="close"></div><span>Contents</span></div><div id="contents-main"><a onclick="close_contents();" href='#introduction' class='level-1'>1: Introduction</a>
+<button onclick="toggle_dark()" id="dark-mode-button" title="You can also add ?dark or ?light to URL just after .html"></button>by <a href="#about-the-author">Karl Zylinski</a><p>Version 1.8</p><p style='margin-top: 40px;'><strong>This is a sample, it contains the first three chapters.</strong></p><p>Buy the full book from <a href="https://store.zylinski.se/b/tnwvO">my store</a> (25% off until October 9, 2025!)</p><p>Visit <a href="https://odinbook.com">odinbook.com</a> for more purchase options. This HTML version is only available through <a href="https://store.zylinski.se/b/tnwvO">my store</a> and <a href="https://zylinski.itch.io/odinbook">Itch</a>.</p></div><h1 id="contents-heading">Contents</h1><div id="contents"><div onclick="toggle_contents()" id="contents-show-button"><div class="line1"></div><div class="line2"></div><div class="line3"></div><div class="close"></div><span>Contents</span></div><div id="contents-main"><a onclick="close_contents();" href='#introduction' class='level-1'>1: Introduction</a>
 <a onclick="close_contents();" href='#why-learn-odin' class='level-2'>1.1: Why learn Odin?</a>
 <a onclick="close_contents();" href='#language-overview' class='level-2'>1.2: Language overview</a>
 <a onclick="close_contents();" href='#why-write-a-book' class='level-2'>1.3: Why write a book?</a>
@@ -1080,7 +1080,7 @@ if ((dark_from_media && !light_from_search) || dark_from_search) {
 <p>I've written this book in an informal style, hoping that it can be enjoyed in its entirety. That said, if you already know Odin fairly well, then I think you can skip directly to <a href='#pointers'>chapter 6</a>.</p>
 <a id='installing-the-odin-compiler' href='#installing-the-odin-compiler'><h2>Installing the Odin compiler<span class='chapter-number'>1.5</span></h2></a>
 <p>I will not go over how to install the Odin compiler. For that I refer to the official <a href='https://odin-lang.org/docs/install/' class='external'>Getting Started</a> guide on the Odin website.</p>
-<p>After installing the compiler I assume that you have the folder where you installed it your path. Meaning that you can run <code>odin</code> from a command prompt or terminal anywhere on your computer.</p>
+<p>After installing the compiler, I assume that you have the folder where you installed it in your path. Meaning that you can run <code>odin</code> from a command prompt or terminal anywhere on your computer.</p>
 <p>Should you have any trouble installing the compiler, then I also have a video on the topic, targeted at Windows users:</p>
 <p><a href="https://www.youtube.com/watch?v=yq5VabsGz_4" class='external'>https://www.youtube.com/watch?v=yq5VabsGz_4</a></p><div class='side-bubble'><div class='extra_content' style='top: 10px;' ><div class='triangle'></div><p class='first'>Note that I install Odin from source in this video. This is not a requirement, you can use the pre-built releases that the <a href='https://odin-lang.org/docs/install/' class='external'>Getting Started</a> page mentions.</p></div></div>
 <a id='if-you-get-stuck' href='#if-you-get-stuck'><h2>If you get stuck<span class='chapter-number'>1.6</span></h2></a>
@@ -1094,10 +1094,9 @@ if ((dark_from_media && !light_from_search) || dark_from_search) {
 <div class='side-bubble'><div class='extra_content' style='top: 0px;' ><div class='triangle'></div><p class='first'>There's also a channel for posting cat pictures!</p></div></div>
 <a id='acknowledgements' href='#acknowledgements'><h2>Acknowledgements<span class='chapter-number'>1.7</span></h2></a>
 <p>Thanks to all my supporters on patreon.com for their donations! It truly helped a lot.</p>
-<p>Thanks to Tobias Möllstam for proof-reading.</p>
-<p>Thanks to PythagoRascal for proof-reading.</p>
-<p>Thanks to Bill Hall (gingerBill) for proof-reading, and for creating the Odin Programming Language!</p>
-<p>Thanks to Geraldine Lee for proof-reading and being a stellar partner while I've been stuck with my nose in the computer.</p>
+<p>Thanks to my proofreaders: Tobias Möllstam, PythagoRascal, blob and Jaysen.</p>
+<p>Thanks to Bill Hall (gingerBill) for proofreading, and for creating the Odin Programming Language!</p>
+<p>Thanks to Geraldine Lee for proofreading and being a stellar partner while I've been stuck with my nose in the computer.</p>
 <a id='copyright-notice' href='#copyright-notice'><h2>Copyright notice<span class='chapter-number'>1.8</span></h2></a>
 <p>Please don't redistribute this book without my explicit permission. If you somehow got hold of this book without paying for it, then please consider buying a copy at <a href='http://odinbook.com' class='external'>odinbook.com</a>.</p>
 <a id='lets-go' href='#lets-go'><h2>Let's go!<span class='chapter-number'>1.9</span></h2></a>
@@ -1146,10 +1145,12 @@ main :: <span class='highlight keyword'>proc</span>() {
 <a id='compile-without-running' href='#compile-without-running'><h2>Compile without running<span class='chapter-number'>2.4</span></h2></a>
 <p>You can replace <code>run</code> with <code>build</code>. Meaning that you execute the following:</p>
 <div class='code_wrapper'><button onclick='copy_to_clipboard(this, this.nextSibling)'>copy</button><pre>odin build .
-</pre></div><p>This will compile your code into an executable, without running it. In both the <code>build</code> and <code>run</code> cases, you'll be able to find the resulting executable next to your Odin source files. The name of the executable will be the name of the folder.</p>
-<figure><img src="chapter_2_exe.jpg" alt="Shows the hellope.exe next to hellope.odin"><figcaption>Regardless of if you execute <code>odin run .</code> or <code>odin build .</code> you'll always get an executable that you can run later without involving the Odin compiler.</figcaption></figure>
+</pre></div><p>This will compile your code into an executable, without running it. You'll be able to find the resulting executable within the same folder as your code. The name of the executable will be the name of the folder.</p>
+<figure><img src="chapter_2_exe.jpg" alt="Shows the hellope.exe next to hellope.odin"><figcaption>The <code>odin build .</code> command results in an executable that you can later run, without involving the Odin compiler.</figcaption></figure>
 <div class='side-bubble'><div class='extra_content' style='top: -150px;' ><div class='triangle'></div><p class='first'>If you are on Windows but can't see the <code>.exe</code> or <code>.odin</code> file endings within the file explorer, then please go into the <em>View</em> tab and check <em>File name extensions</em>. Computers are pretty much unusable for software development without enabling this.</p></div></div>
-<a id='no-need-for-semicolons' href='#no-need-for-semicolons'><h2>No need for semicolons<span class='chapter-number'>2.5</span></h2></a>
+<p>Actually, <code>odin run .</code> also creates an executable, and then runs it. But the executable is automatically deleted when it finishes running. To skip the deletion, add <code>-keep-executable</code>:</p>
+<div class='code_wrapper'><button onclick='copy_to_clipboard(this, this.nextSibling)'>copy</button><pre>odin run . -keep-executable
+</pre></div><a id='no-need-for-semicolons' href='#no-need-for-semicolons'><h2>No need for semicolons<span class='chapter-number'>2.5</span></h2></a>
 <p>There's no need to put a semicolon (<code>;</code>) at the end of each line, as is required in many other languages.</p>
 <p>Semicolons are <em>optional</em>, but I would encourage to simply not use them. The absence of semicolons fits well with the aesthetics of Odin. However, you can use them if you really want to!</p>
 <p>Also, if you really want to make sure that you don't accidentally use them by old habit, then there is a compiler flag to make any unnecessary semicolon into an error: <code>-vet-semicolon</code></p>
@@ -1214,7 +1215,7 @@ main :: <span class='highlight keyword'>proc</span>() {
 </pre></div><p>But what happens if we do the following?</p>
 <div class='code_wrapper'><button onclick='copy_to_clipboard(this, this.nextSibling)'>copy</button><pre>decimal_number := <span class='highlight number'>7.42</span>
 </pre></div><p>In this case <code>decimal_number</code> will be inferred to have the type <code>f64</code>, <em>not</em> <code>f32</code>.</p>
-<p>So when you write <code>decimal_number := 42.07</code>, then there seems to be some kind of default choice of for giving it the type <code>f64</code>. We shall soon see where these default choices come from.</p>
+<p>So when you write <code>decimal_number := 42.07</code>, then there is a default choice of type <code>f64</code>. We shall soon see where these default choices come from.</p>
 <a id='something-strange' href='#something-strange'><h3>Something strange?<span class='chapter-number'>3.2.1</span></h3></a>
 <p>Now we'll get to the stuff that may initially seem strange, but will end up being <em>very useful</em> once you get it. The following code compiles just fine:</p>
 <div class='code_wrapper'><button onclick='copy_to_clipboard(this, this.nextSibling)'>copy</button><pre>number := <span class='highlight number'>7</span>
@@ -1314,8 +1315,9 @@ decimal_64 = <span class='highlight number'>0.5</span>
 <li>Possible values: Text encoded as UTF-8</li>
 <li>Zero value: <code>""</code> (empty string)</li>
 <li>There's also a <code>cstring</code> type for interfacing with the C programming language. There are procedures in <a href='https://pkg.odin-lang.org/core/strings/' class='external'><code>core:strings</code></a> to convert back and forth between <code>string</code> and <code>cstring</code>.</li>
+<li>Additionally, there are <code>string16</code> and <code>cstring16</code> types that use UTF-16 instead of UTF-8. These are useful when interfacing with, for example, the Windows Operating System API.</li>
 <li>There's <a href='#strings-1'>a whole chapter on strings</a>.</li>
-</ul><div class='side-bubble'><div class='extra_content c' style='top: -10px;' ><div class='triangle'></div><p class='first'>In contrast to C, a <code>string</code> knows how long it is and does not use null-termination. Therefore <code>len(some_string)</code> can tell you the length of the string without having to scan through it in search for a null character. The <code>cstring</code> type uses a null-terminator.</p></div></div>
+</ul><div class='side-bubble'><div class='extra_content c' style='top: -80px;' ><div class='triangle'></div><p class='first'>In contrast to C, a <code>string</code> knows how long it is and does not use null-termination. Therefore <code>len(some_string)</code> can tell you the length of the string without having to scan through it in search for a null character. The <code>cstring</code> type uses a null-terminator.</p></div></div>
 <a id='runes' href='#runes'><h4>Runes<span class='chapter-number'></span></h4></a>
 <ul><li>Type: <code>rune</code></li>
 <li>A single UTF-8 string code point (in many cases a single character, but can be part of a <em>grapheme cluster</em>. More about that in the <a href='#strings-1'>strings chapter</a>).</li>
@@ -1338,7 +1340,7 @@ decimal_64 = <span class='highlight number'>0.5</span>
 <li>Inferred type of <code>some_variable := 23.12</code> is <code>f64</code> (on all systems, even on a 32 bit computer).</li>
 </ul><a id='untyped-strings' href='#untyped-strings'><h4>Untyped Strings<span class='chapter-number'></span></h4></a>
 <ul><li>The type of any string constant, meaning something between two quotation marks <code>"a_string"</code> or between two backticks <code>&#96;can be multi-line&#96;</code>.</li>
-<li>Can be implicitly cast to <code>string</code> and <code>cstring</code>.</li>
+<li>Can be implicitly cast to <code>string</code>, <code>cstring</code>, <code>string16</code> and <code>cstring16</code>.</li>
 <li>Inferred type of <code>some_variable := "Hellope"</code> is <code>string</code>.</li>
 </ul><a id='untyped-runes' href='#untyped-runes'><h4>Untyped Runes<span class='chapter-number'></span></h4></a>
 <ul><li>The type of any single character constant, such as <code>'A'</code>.</li>
@@ -1354,10 +1356,10 @@ decimal_64 = <span class='highlight number'>0.5</span>
 <p><a href="https://www.youtube.com/watch?v=qLYga3iCmt0" class='external'>https://www.youtube.com/watch?v=qLYga3iCmt0</a></p>
 <a href="#end-of-sample"><h1 id="end-of-sample">End of sample</h1></a>
 <p>
-Thanks for reading! This is the end of the sample. Buy the full book at <a href="https://odinbook.com">odinbook.com</a>.
+Thanks for reading! This is the end of the sample. Buy the full book from <a href="https://store.zylinski.se/b/tnwvO">my store</a> (25% off until October 9, 2025!)
 </p>
 <p>
-This HTML version is only available through <a href="https://store.zylinski.se/b/tnwvO">My Store</a> and <a href="https://zylinski.itch.io/odinbook">Itch</a>.
+Visit <a href="https://odinbook.com">odinbook.com</a> for more purchase options. This HTML version is only available through <a href="https://store.zylinski.se/b/tnwvO">my store</a> and <a href="https://zylinski.itch.io/odinbook">Itch</a>.
 </p>
 <p>
 The full book contains these chapters:
