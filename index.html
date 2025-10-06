@@ -26,7 +26,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 
-<link rel="stylesheet" href="style.css?version=6">
+<link rel="stylesheet" href="style.css?version=7">
 <meta property="og:title" content="Understanding the Odin Programming Language">
 <meta property="og:description" content="Learn the Odin Programming Language and demystify low-level programming">
 <meta property="og:type" content="website">
@@ -167,7 +167,9 @@
 
 <iframe style="width: 100%; aspect-ratio: 16/9;" src="https://www.youtube-nocookie.com/embed/K5bgLTfDxWM?si=ATJyovRHw4ogZ1mX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<h2 id="release_notes" style="margin-top: 40px">Release notes: Version 1.8</h2>
+<h2 id="release_notes" style="margin-top: 40px">Release notes</h2>
+
+<details open><summary>Version 1.8</summary>
 <h3>Strings chapter overhaul</h3>
 <p>
 This version does some major changes to the strings chapter (chapter 11). It has been heavily revised and expanded. Some changes are:
@@ -202,6 +204,124 @@ This version does some major changes to the strings chapter (chapter 11). It has
 <p>
     Get the latest version by just re-downloading the book from wherever you bought it.
 </p>
+
+</details>
+
+<details><summary>Version 1.7</summary>
+
+<ul>
+<li>Chapter 1: Fix broken Discord link</li>
+<li>Chapter 5.1.3: Typo fix</li>
+<li>Chapter 9.7: <code>rand.int_max</code> range clarification</li>
+<li>Chapter 14.3: Improved 'Special_Array' example</li>
+<li>Chapter 23: Typo fix</li>
+<li>Chapter 26.6: Fix broken WebGPU example link</li>
+<li>Appendix D: Fix compilation error</li>
+</ul>
+
+</details>
+
+
+<details><summary>Version 1.6</summary>
+
+<ul>
+
+<li>New section 17.5 called "Breaking cyclic dependencies using callbacks", about how to use callbacks to work around situations where you'd need a cyclic dependency and how to create rudimentary interfaces.</li>
+<li>Chapter 13.1.2: Updated the tracking allocator examples based on recent changes to how the handling of bad frees work.</li>
+<li>A new section 18.6 called "More complicated build setups". A short section about writing bigger custom build scripts.</li>
+<li>A new section 26.10 called "Code generation": It just says what code generation is and links to an example.</li>
+<li>Appendix D: Removed some unnecessary things from the the Raylib + Box2D sample and made it a bit clearer.</li>
+<li>Added an icon to the HTML version, so it's easier to find the tab.</li>
+<li>Chapter 23.3: Made it clearer that you don't need to avoid dynamic literals, but you need to understand that they allocate memory.</li>
+<li>Chapter 6.3: Typo fix</li>
+<li>Chapter 8.1.3: Fix incorrect direction of the vector <code>from_1_to_2</code></li>
+<li>Chapter 8.1.4: Consistent use of procedure name <code>draw_image</code> instead of sometimes using <code>draw_texture</code>.</li>
+<li>Chapter 12.1: Typo fix</li>
+<li>Chapter 23.1: Minor rephrasing for clarity</li>
+</ul>
+
+</details>
+
+<details><summary>Version 1.5</summary>
+
+<p>I have read the whole book, essentially doing an extra editing pass. I've made a huge amount of changes that make the text clearer. Here are some of the bigger changes:</p>
+
+<ul>
+<li>Clarification about the size of <code>My_Union</code> in 5.3</li>
+<li>Use the words "member" and "value" when talking about enums. Previously I used "enum value" and "value". The old wording was confusing and ambiguous.</li>
+<li>Renamed chapter 26 to "A few more things..." and edited the content a bit.</li>
+<li>Mention <code>#load</code> in chapter 26</li>
+<li>Mention <code>@rodata</code> in chapter 26</li>
+<li>A section about "Making libraries compile cleanly" in chapter 26</li>
+<li>New section 7.8 (<code>@init</code> and </code>@fini</code>)</li>
+<li>Section 4.3 (Loops) has been improved.</li>
+<li>Section 6.3 (A pointer to a struct) is now more pedagogical.</li>
+<li>Section 10.3 (Custom iterators) has been improved.</li>
+<li>New section 11.5.1 (Deallocating strings that are mixed with string constants)</li>
+<li>Section 12.6 (context.user_ptr and context.user_index) has a new example.</li>
+<li>Fix for illustration in 2.6 having a minor error.</li>
+<li>Move dynamic literals to chapter 23 (Things in Odin to avoid) since they are disabled by default, for a good reason.</li>
+<li>Chapter 18: Nuance about "not needing a build system" and what I actually mean when I say "build system".</li>
+<li>Made a few things in 6.5 clearer</li>
+<li>Fix typos in 5.1.3, 5.2.1, 6.5, 10.2.1 reported by readers (thanks!)</li>
+<li>Added version number to front.</li>
+<li>Fix for YouTube links using wrong "external link" symbol in HTML version.</li>
+<li>Link to CAT & ONION on itch.io (since it comes with Odin code).</li>
+<li>Mention <code>#reverse</code> in "Chapter 4: Some additional basics"</li>
+</ul>
+
+</details>
+
+<details><summary>Version 1.4</summary>
+
+<ul>
+<li>Regarding automatic passing as immutable references: Changed "sufficiently large" into "larger than 16 bytes". Recently, Odin changed the threshold to always be 16 bytes, regardless of platform.</li>
+<li>Clarified side-bubble in 6.2 regarding how many bits of a pointer that are usually used.</li>
+<li>Make it clearer what is meant by "procedure's stack memory" in 8.1.2.</li>
+<li>Added a comment in 8.1.3 about what "stack allocated array" means and point out that a later chapter will show how to dynamically allocate fixed arrays.</li>
+<li>Fix for EPUB issue where some of the appendices looked weird.</li>
+<li>Minor typo fixes.</li>
+</ul>
+
+</details>
+
+
+<details><summary>Version 1.3</summary>
+
+<ul>
+<li>Fix for EPUB issue where some of the appendices looked weird.</li>
+<li>More nuance in 13.1.1 about cleaning up memory allocations at shutdown.</li>
+<li>More nuance in 5.3.5 about using Odin for non-gamedev.</li>
+<li>Clarifications in 3.2 regarding my sloppy use of the word "decimal".</li>
+<li>Fixed <code>level</code> not being a pointer in 13.2 and added some info about why it needs to be a pointer.</li>
+<li>Fixed an error in 8.1.1 where the index 20 was used instead of index 10.</li>
+<li>Additional typo fixes.</li>
+</ul>
+
+</details>
+
+
+<details><summary>Version 1.2</summary>
+
+<ul>
+<li>New section on Address Sanitizer in chapter 13.</li>
+<li>Fixed 28 different typos and grammar issues based on a list that PythagoRascal sent me. Thanks!</li>
+<li>Fixed indentation error in <code>bit_set</code> chapter.</li>
+<li>Clarifications about using <code>bit_set</code> versus using a-set-that-is-a-map.</li>
+<li>Section on <code>Small_Array</code> has has been improved for clarity.</li>
+<li>Mentioned that Untyped Floats can be implicitly converted to integers if no truncation happens.</li>
+<li>Clarification about how <code>delete</code> works.</li>
+<li>Added a bubble that mentioned what <code>@static</code> on local variables does.</li>
+<li>Additional typo fixes, some from people on my Discord. Thanks everyone!</li>
+</ul>
+
+</details>
+
+<details><summary>Version 1.1</summary>
+
+Released shortly after 1.0. Fixes a bunch of typos.
+
+</details>
 
 <hr>
 

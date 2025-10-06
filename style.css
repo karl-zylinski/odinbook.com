@@ -18,6 +18,17 @@ a:visited {
 	color: #3d6dda;
 }
 
+details summary {
+	font-weight: bold;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+}
+
+details summary:hover {
+	cursor: pointer;
+}
+
 #main {
 	width: 670px;
 	margin: 0 auto;
